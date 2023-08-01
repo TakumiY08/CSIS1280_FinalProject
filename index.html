@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top page</title>
-    <link rel="stylesheet" href="../MultimediaProject/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -13,8 +13,8 @@
     </header>
     <nav>
         <ul>
-            <li><a href="../MultimediaProject/index.html">Home</a></li>
-            <li><a href="../MultimediaProject/profile.html">About us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">About us</a></li>
         </ul>
     </nav>
     <div class="contents">
@@ -23,7 +23,10 @@
                 <table>
                     <tr>
                         <td id="tdHouse">House</td>
-                        <td id="tdInput"><input type="text" id="txtHouse" name="inputHouse" placeholder="123456789.12"></td>
+                        <td id="tdInput">
+                            <label for="" id="lblAmount">Amount</label><input type="text" id="txtHouse" name="inputHouse" placeholder="123456789.12">
+                            <label for="" id="lblMonthly">Monthly Savings</label><input type="text" id="txtHouseMonthly" name="inputHouse" placeholder="123456789.12">
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -31,7 +34,10 @@
                 <table>
                     <tr>
                         <td id="tdEducation">Education</td>
-                        <td id="tdInput"><input type="text" id="txtEducation" name="inputEducation" placeholder="123456789.12"></td>
+                        <td id="tdInput">
+                            <label for="" id="lblAmount">Amount</label><input type="text" id="txtEducation" name="inputEducation" placeholder="123456789.12">
+                            <label for="" id="lblMonthly">Monthly Savings</label><input type="text" id="txtEducationMonthly" name="inputHouse" placeholder="123456789.12">
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -39,17 +45,21 @@
                 <table>
                     <tr>
                         <td id="tdVacation">Vacation</td>
-                        <td id="tdInput"><input type="text" id="txtVacation" name="inputHouse" placeholder="123456789.12"></td>
+                        <td id="tdInput">
+                            <label for="" id="lblAmount">Amount</label><input type="text" id="txtVacation" name="inputHouse" placeholder="123456789.12">
+                            <label for="" id="lblMonthly">Monthly Savings</label><input type="text" id="txtVacationMonthly" name="inputHouse" placeholder="123456789.12">
+                        </td>
                     </tr>
                 </table>
             </div>
             <div class="calculateButton">
-                <button type="button" id="btnCalculate"><a href="../MultimediaProject/result.html" id="anchorCalculate">Calculate</a></button>
+                <button type="button" id="btnCalculate" onclick="calculateResults()"><a href="result.html" id="anchorCalculate">Calculate</a></button>
             </div>
         </div>
     </div>     
     <footer>
         <h2>&copyTakumi & Kevin</h2>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

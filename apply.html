@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlId">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply page</title>
-    <link rel="stylesheet" href="../MultimediaProject/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../MultimediaProject/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../MultimediaProject/css/style.css">
-    <script src="../MultimediaProject/js/jquery-3.7.0.min.js"></script>
-    <script src="../MultimediaProject/js/owl.carousel.min.js"></script>
-    <script src="../MultimediaProject/js/owl_carousel.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl_carousel.js"></script>
 </head>
 <body>
     <header>
@@ -18,8 +19,8 @@
     </header>
     <nav>
         <ul>
-            <li><a href="../MultimediaProject/index.html">Home</a></li>
-            <li><a href="../MultimediaProject/profile.html">About us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">About us</a></li>
         </ul>
     </nav>
     <div class="contents">
@@ -31,7 +32,7 @@
                             <td id="td-image-house">HOUSE</td>
                         </tr>
                         <tr id="tr-apply">
-                            <td id="td-apply-house"><button type="button" id="btnApply" class="btnApplyHouse">Apply</button></td>
+                            <td id="td-apply-house"><button type="button" id="btnApply" class="btnApplyHouse" value="House" onclick="OpenForm(value)">Apply</button></td>
                         </tr>
                     </table>
                 </div>
@@ -41,7 +42,7 @@
                             <td id="td-image-education">EDUCATION</td>
                         </tr>
                         <tr id="tr-apply">
-                            <td id="td-apply-education"><button type="button" id="btnApply" class="btnApplyEducation">Apply</button></td>
+                            <td id="td-apply-education"><button type="button" id="btnApply" class="btnApplyEducation" value="Education" onclick="OpenForm(value)">Apply</button></td>
                         </tr>
                     </table>
                 </div>
@@ -51,13 +52,79 @@
                             <td id="td-image-vacation">VACATION</td>
                         </tr>
                         <tr id="tr-apply">
-                            <td id="td-apply-vacation"><button type="button" id="btnApply" class="btnApplyVacation">Apply</button></td>
+                            <td id="td-apply-vacation"><button type="button" id="btnApply" class="btnApplyVacation" value="Vacation" onclick="OpenForm(value)">Apply</button></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+    <!--Start Modal Pop-Up -->
+    <div class="contents-modal" id="modal-popup">
+        <div class="items-popup">
+            <form action="mailto:yonemurat@student.douglascollege.ca" method="post" enctype="text/plain" name="applicationForm">
+                <div class="close-form">
+                    <button type="button" class="btnClose" id="btnClose" onclick="CloseForm(id)">&times;</button>
+                </div>
+                <div class="title-form">
+                    <label for="applicationTitle" id="lblTitle">Application Form</label>
+                </div>
+                <table id="table-form">
+                    <tr id="tr-form">
+                        <td id="td-label-form"><label for="firstName" id="lblFirstName">FirstName</label></td>
+                        <td id="td-form"><input type="text" id="txtFirstName" placeholder="FirstName"></td>
+                    </tr>
+                    <tr id="tr-form">
+                        <td id="td-label-form"><label for="lastName" id="lblLastName">LastName</label></td>
+                        <td id="td-form"><input type="text" id="txtLastName" placeholder="LastName"></td>
+                    </tr>
+                    <tr id="tr-form">
+                        <td id="td-label-form"><label for="email" id="lblEmail">Email</label></td>
+                        <td id="td-form"><input type="email" id="txtEmail" placeholder="sample@sample.com"></td>
+                    </tr>
+                    <tr id="tr-form">
+                        <td colspan="2" id="td-submit-form"><input type="submit" value="Send" id="btnSubmit" onclick="CompleteApply()"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="contents-modal-mobile" id="modal-popup-mobile">
+        <div class="items-popup">
+            <form action="mailto:yonemurat@student.douglascollege.ca" method="post" enctype="text/plain" name="applicationForm">
+                <div class="close-form">
+                    <button type="button" class="btnClose" id="btnCloseMobile" onclick="CloseForm(id)">&times;</button>
+                </div>
+                <div class="title-form">
+                    <label for="applicationTitle" id="lblTitleMobile">Application Form</label>
+                </div>
+                <table id="table-form">
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-label-mobile"><label for="firstName" id="lblFirstName">FirstName</label></td>
+                    </tr>
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-input-mobile"><input type="text" id="txtFirstNameMobile" placeholder="FirstName"></td>
+                    </tr>
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-label-mobile"><label for="lastName" id="lblLastName">LastName</label></td>
+                    </tr>
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-input-mobile"><input type="text" id="txtLastNameMobile" placeholder="LastName"></td>
+                    </tr>
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-label-mobile"><label for="email" id="lblEmail">Email</label></td>
+                    </tr>
+                    <tr id="tr-form-mobile">
+                        <td id="td-form-input-mobile"><input type="email" id="txtEmailMobile" placeholder="sample@sample.com"></td>
+                    </tr>
+                    <tr id="tr-form">
+                        <td colspan="2" id="td-submit-form"><input type="submit" value="Send" id="btnSubmit" onclick="CompleteApply()"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--End Modal Pop-Up-->
     <footer>
         <h2>&copyTakumi & Kevin</h2>
     </footer>

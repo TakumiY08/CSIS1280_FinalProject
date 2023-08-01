@@ -17,21 +17,18 @@ body {
     flex-direction: column;
 }
 
-header {
-    flex-basis: 10%;
-    text-align: left;
-    background-color: #0058a0;
-    border-bottom: 1px solid #3076b0;
-}
-
 h1, h2 {
-    font-size: xx-large;
     color:white;
-    margin-left: 20px;
 }
 
 h2 {
     font-size: large;
+}
+
+header {
+    flex-basis: 10%;
+    background-color: #0058a0;
+    border-bottom: 1px solid #3076b0;
 }
 
 nav {
@@ -47,9 +44,10 @@ ul {
 }
 
 li {
-    width: 10%;
+    width: max-content;
     color: white;
     list-style: circle;
+    margin-right: 10%;
 }
 
 li a {
@@ -72,7 +70,7 @@ footer {
     align-items: end;
 }
 
-/* Top page */
+/* Common Top page */
 .items-top {
     height: 100%;
     width: 80%;
@@ -86,7 +84,7 @@ footer {
     flex-basis: 28%;
     height: 100%;
     width: 100%;
-    padding: 5px 0px 5px 0px;
+    padding: 3px 0px 3px 0px;
     border-bottom: 1px solid #3076b0;
 }
 
@@ -105,43 +103,52 @@ table, tbody, tr {
 }
 
 #tdHouse, #tdEducation, #tdVacation {
-    width: 70%;
-    font-size: 45px;
     color: white;
     text-align: center;
-    text-shadow: 2px 2px black;
+    text-shadow: 3px 3px black;
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
 }
 
 #tdHouse {
     background-image: url(../img/house.jpg);
+    /* background-image: url(img/house.jpg); */
 }
 
 #tdEducation {
     background-image: url(../img/education.jpg);
+    /* background-image: url(img/education.jpg); */
 }
 
 #tdVacation {
     background-image: url(../img/vacation.jpg);
+    /* background-image: url(img/vacation.jpg); */
 }
 
 #tdInput {
-    width: 30%;
+    height: 100%;
+    width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
 }
 
-#txtHouse, #txtEducation, #txtVacation {
-    height: 20%;
-    width: 50%;
+#lblAmount, #lblMonthly {
+    font-size: 20px;
+}
+
+#txtHouse, #txtEducation, #txtVacation,
+#txtHouseMonthly, #txtEducationMonthly, #txtVacationMonthly {
+    height: 15%;
     border: 2px solid #3076b0;
     border-radius: 20px;
 }
 
 #btnCalculate {
     height: 50%;
-    width: 30%;
     background-color: #f85050;
     border: 1px solid #f85050;
     border-radius: 20px;
@@ -151,30 +158,150 @@ table, tbody, tr {
 }
 
 #anchorCalculate {
-    font-size: 30px;
     color: white;
     text-decoration: none;
 }
 
-/* Result page */
-.content-result {
-    flex-basis: 75%;
-    background-color: white;
-}
-
-img {
-    height: 30%;
-    width: 30%;
+/* Common Result page */
+.items-result {
+    height: 100%;
+    width: 80%;
     margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
 }
 
-/* Profile page */
+.array-result {
+    flex-basis: 70%;
+    height: 100%;
+    width: 100%;
+}
+
+.panelResult {
+    flex-basis: 33%;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #3076b0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0058a0;
+}
+
+#table-result {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#trResultHeader {
+    height: 20%;
+    width: 100%;
+}
+
+#tdResultHeader {
+    width: 100%;
+    text-align: center;
+}
+
+#trResultPara {
+    height: 15%;
+    width: 100%;
+}
+
+#tdResultPara {
+    width: 100%;
+    text-align: center;
+}
+
+#trResultDetailHeader {
+    height: 15%;
+    width: 100%;
+}
+
+#trResultDetailHeader > td {
+    height: 15%;
+    width: 33%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#trResultDetails {
+    height: 15%;
+    width: 100%;
+}
+
+#trResultDetails > td {
+    height: 15%;
+    width: 33%;
+    text-align: center;    
+}
+
+.resultYear {
+    color: orange;
+    font-weight: bold;
+}
+
+.panelFunds {
+    height: 100%;
+    width: 80%;
+    border: 1px solid #3076b0;
+    border-radius: 20px;
+}
+
+#table-funds {
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+}
+
+#trFunds {
+    height: 33%;
+    width: 100%;
+}
+
+#tdFundsHeader {
+    width: 10%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#tdFundsType {
+    width: 30%;
+}
+
+#tdFundsLink {
+    width: 50%;
+    text-align: left;
+}
+
+.panelToApply {
+    height: 100%;
+    width: 100%;
+}
+
+#btnToApplyPage {
+    background-color: #f85050;
+    border: 1px solid #f85050;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#anchorApply {
+    color: white;
+    text-decoration: none;
+}
+
+/* Common Profile page */
 .items-profile {
     height: 100%;
     width: 80%;
     margin: auto;
+    padding: 5px;
     display: flex;
-    flex-direction: row;
 }
 
 .profile {
@@ -188,7 +315,7 @@ img {
     column-gap: 5px;
 }
 
-.profile-icon {
+.profile-icon1 {
     flex-basis: 30%;
     height: 100%;
     width: 100%;
@@ -201,12 +328,25 @@ img {
     align-items: center;
 }
 
+.profile-icon2 {
+    flex-basis: 30%;
+    height: 100%;
+    width: 100%;
+    background: url(../img/phil.JPG) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-image {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border: 3px solid #3076b0;
     border-radius: 50%;
-    transition: all 0.5s;;
+    transition: all 0.5s;
 }
 
 .profile-image:hover {
@@ -228,7 +368,6 @@ img {
 }
 
 .background > h2, .goal > h2 {
-    font-size: 20px;
     color: black;
 }
 
@@ -238,14 +377,15 @@ img {
 }
 
 .background > p, .goal > p {
-    font-size: 20px;
-    margin-left: 25px;
+    margin-left: 5%;
 }
 
 ul.skills {
     padding: 0;
     text-align: center;
     margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .skills li {
@@ -262,7 +402,7 @@ ul.skills {
     background:#0399ff;
 }
 
-/* Apply page */
+/* Common Apply page */
 .items-apply {
     height: 100%;
     width: 80%;
@@ -289,7 +429,6 @@ table {
 #tr-image {
     height: 80%;
     width: 100%;
-    font-size: 70px;
     color:white;
     text-align: center;
     text-shadow: 3px 3px black;
@@ -342,6 +481,10 @@ table {
     align-items: center;    
 }
 
+#btnApply:hover {
+    cursor: pointer;
+}
+
 .owl-nav {
     width: 100%;
     position: absolute;
@@ -350,8 +493,6 @@ table {
 
 .owl-prev, .owl-next {
     position: absolute;
-    font-size: 50px !important;
-    height: 120px !important;
     width: 50px !important;
     background-color: #3076b0!important;
     border: 1px solid white !important;
@@ -359,11 +500,608 @@ table {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    opacity: 0.9;
-    
+    opacity: 0.5;
 }
 
 .owl-next {
     right: 0%;
 }
 
+/* Modal Popup */
+.contents-modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top : 10%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.items-popup {
+    background-color: white;
+    border: 3xp solid #3076b0;
+    border-radius: 20px;
+    margin: auto;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.close-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.title-form {
+    text-align:center;
+    margin-bottom: 5%;
+}
+
+#lblTitle {
+    font-size: xx-large;
+    font-weight: bold;
+    color: black;
+    text-align: center; 
+}
+
+.btnClose {
+    font-weight: 200;
+    border-style: none;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#table-form {
+    height: 80%;
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#tr-form {
+    height: 15%;
+    width: 100%;
+}
+
+#td-label-form {
+    width: 30%;
+    text-align: right;
+}
+
+#td-form {
+    width: 60%;
+    text-align: center;
+}
+
+#td-submit-form {
+    text-align: center;
+}
+
+#lblFirstName, #lblLastName, #lblEmail {
+    color: black;
+    text-align: right;
+}
+
+#txtFirstName, #txtLastName, #txtEmail {
+    height: 50%;
+    width: 90%;
+    border: 2px solid #3076b0;
+    border-radius: 20px;
+}
+
+#btnSubmit {
+    font-size: 20px;
+    color: white;
+    background-color: #f85050;
+    border: 1px solid #f85050;
+    border-radius: 10px;
+}
+
+#btnSubmit:hover, .btnClose:hover {
+    cursor: pointer;
+}
+
+/* Modal Popup Mobile */
+.contents-modal-mobile {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top : 10%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#lblTitleMobile {
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    text-align: center; 
+}
+
+#tr-form-mobile {
+    height: 5%;
+    width: 100%;
+}
+
+#td-form-label-mobile {
+    width: 100%;
+    text-align: left;
+}
+
+#td-form-input-mobile {
+    width: 100%;
+    text-align: right;
+}
+
+#txtFirstNameMobile, #txtLastNameMobile, #txtEmailMobile {
+    height: 60%;
+    width: 90%;
+    border: 2px solid #3076b0;
+    border-radius: 20px;
+}
+
+/* Phone */
+@media (max-width: 480px) {
+    /* Common */
+    header {
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: x-large;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+
+    /* Top page */
+    #tdHouse, #tdEducation, #tdVacation {
+        width: 50%;
+        font-size: 30px;
+        border-radius: 50%;
+    }
+
+    #txtHouse, #txtEducation, #txtVacation,
+    #txtHouseMonthly, #txtEducationMonthly, #txtVacationMonthly {
+        width: 70%;
+    }
+
+    #btnCalculate {
+        width: 60%;
+    }
+
+    #anchorCalculate {
+        font-size: 25px;
+    }
+
+    /* Result page */
+    .contents[rel=result] {
+        height: max-content;
+    }
+
+    .array-result {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3%;
+    }
+
+    #tdResultHeader {
+        font-size: 30px;
+    }
+
+    #tdResultPara {
+        font-size: 15px;
+    }
+
+    #trResultDetailHeader > td {
+        font-size: 15px;
+    }
+
+    #trResultDetails > td {
+        font-size: 12px;
+    }
+
+    .resultYear {
+        font-size: 18px !important;
+    }
+
+    .panelFunds {
+        visibility: hidden;
+        flex-basis: 0%;
+        height: 0%;
+        margin: 0;
+    }
+
+    #tdFundsHeader {
+        font-size: 20px;
+    }
+
+    #tdFundsType {
+        font-size: 15px;
+    }
+
+    .panelToApply {
+        flex-basis: 20%;
+        padding-top: 10%;
+    }
+
+    #btnToApplyPage {
+        height: 50%;
+        width: 70%;
+    }
+
+    #anchorApply {
+        font-size: 25px;
+    }
+
+    /* Profile page */
+    .contents[rel=profile] {
+        height: max-content;
+    }
+
+    .items-profile {
+        flex-direction: column;
+    }
+
+    .detail-profile > h1 {
+        font-size: 15px;
+    }
+
+    .background > h2, .goal > h2 {
+        font-size: 15px;
+    }
+    
+    .background > p, .goal > p {
+        font-size: 12px;
+    }
+
+    /* Apply page */
+    #tr-image {
+        font-size: 40px;
+    }
+
+    .owl-prev, .owl-next {
+        font-size: 20px !important;
+        height: 50px !important;
+    }
+
+    /* Modal Popup */
+    .items-popup {
+        height: 60%;
+        width: 90%;
+    }
+
+    #lblTitle {
+        font-size: large;
+    }
+
+    .btnClose {
+        font-size: large;
+    }
+
+    #lblFirstName, #lblLastName, #lblEmail {
+        font-size: large;
+        position: relative;
+        top: 30%;
+    }
+
+    #btnSubmit {
+        height: 30%;
+        width: 70%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    /* Common */
+    header {
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    /* Top page */
+    #tdHouse, #tdEducation, #tdVacation {
+        width: 60%;
+        font-size: 35px;
+        border-radius: 20px;
+    }
+
+    #txtHouse, #txtEducation, #txtVacation,
+    #txtHouseMonthly, #txtEducationMonthly, #txtVacationMonthly {
+        width: 70%;
+    }
+
+    #btnCalculate {
+        width: 60%;
+    }
+
+    #anchorCalculate {
+        font-size: 25px;
+    }
+
+    /* Result page */
+    .contents[rel=result] {
+        height: max-content;
+    }
+
+    .array-result {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3%;
+    }
+
+    #tdResultHeader {
+        font-size: 30px;
+    }
+
+    #tdResultPara {
+        font-size: 15px;
+    }
+
+    #trResultDetailHeader > td {
+        font-size: 15px;
+    }
+
+    #trResultDetails > td {
+        font-size: 12px;
+    }
+
+    .resultYear {
+        font-size: 18px !important;
+    }
+
+    .panelFunds {
+        visibility: hidden;
+        flex-basis: 0%;
+        height: 0%;
+        margin: 0;
+    }
+
+    #tdFundsHeader {
+        font-size: 20px;
+    }
+
+    #tdFundsType {
+        font-size: 15px;
+    }
+
+    .panelToApply {
+        flex-basis: 20%;
+        padding-top: 10%;
+    }
+
+    #btnToApplyPage {
+        height: 50%;
+        width: 70%;
+    }
+
+    #anchorApply {
+        font-size: 25px;
+    }
+
+    /* Profile page */
+    .contents[rel=profile] {
+        height: max-content;
+    }
+    
+    .items-profile {
+        flex-direction: column;
+    }
+
+    .detail-profile > h1 {
+        font-size: 20px;
+    }
+
+    .background > h2, .goal > h2 {
+        font-size: 15px;
+    }
+    
+    .background > p, .goal > p {
+        font-size: 12px;
+    }
+
+    /* Apply page */
+    #tr-image {
+        font-size: 60px;
+    }
+
+    .owl-prev, .owl-next {
+        font-size: 30px !important;
+        height: 60px !important;
+    }
+
+    /* Modal Popup */
+    .items-popup {
+        height: 60%;
+        width: 90%;
+    }
+
+    #lblTitle {
+        font-size: large;
+    }
+
+    .btnClose {
+        font-size: large;
+    }
+
+    #lblFirstName, #lblLastName, #lblEmail {
+        font-size: large;
+        position: relative;
+        top: 30%;
+    }
+
+    #btnSubmit {
+        height: 30%;
+        width: 70%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    /* Common */
+    header {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    h1, h2 {
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    /* Top page */
+    #tdHouse, #tdEducation, #tdVacation {
+        width: 70%;
+        font-size: 45px;
+        border-radius: 20px;
+    }
+
+    #txtHouse, #txtEducation, #txtVacation,
+    #txtHouseMonthly, #txtEducationMonthly, #txtVacationMonthly {
+        width: 50%;
+    }
+
+    #btnCalculate {
+        width: 50%;
+    }
+
+    #anchorCalculate {
+        font-size: 30px;
+    }
+
+    /* Result page */
+    .contents[rel=result] {
+        height: 100%;
+    }
+
+    .array-result {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2%;
+    }
+
+    #tdResultHeader {
+        font-size: 40px;
+    }
+
+    #tdResultPara {
+        font-size: 20px;
+    }
+
+    #trResultDetailHeader > td {
+        font-size: 20px;
+    }
+
+    #trResultDetails > td {
+        font-size: 15px;
+    }
+
+    .resultYear {
+        font-size: 20px !important;
+    }
+
+    .panelFunds {
+        visibility: visible;
+        flex-basis: 20%;
+        margin: auto;
+    }
+
+    #tdFundsHeader {
+        font-size: 25px;
+    }
+
+    #tdFundsType {
+        font-size: 20px;
+    }
+
+    .panelToApply {
+        flex-basis: 10%;
+        padding-top: 0%;
+    }
+
+    #btnToApplyPage {
+        height: 100%;
+        width: 30%;
+    }
+
+    #anchorApply {
+        font-size: 30px;
+    }
+
+    /* Profile page */
+    .items-profile {
+        flex-direction: row;
+    }
+
+    .background > h2, .goal > h2 {
+        font-size: x-large;
+        color: black;
+    }
+    
+    .background > p, .goal > p {
+        font-size: large;
+    }
+
+    /* Apply page */
+    #tr-image {
+        font-size: 80px;
+    }
+
+    .owl-prev, .owl-next {
+        font-size: 40px !important;
+        height: 100px !important;
+    }
+
+    /* Apply page */
+    #tr-image {
+        font-size: 50px;
+    }
+
+    /* Modal Popup */
+    .items-popup {
+        height: 80%;
+        width: 60%;
+    }
+    #lblTitle {
+        font-size: x-large;
+    }
+
+    .btnClose {
+        font-size: x-large;
+    }
+
+    #lblFirstName, #lblLastName, #lblEmail {
+        position: none;
+        top: 0;
+        font-size: x-large;
+    }
+
+    #btnSubmit {
+        height: 50%;
+        width: 60%;
+    }
+}

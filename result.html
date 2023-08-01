@@ -4,24 +4,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result page</title>
-    <link rel="stylesheet" href="../MultimediaProject/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
         <h1>Financial calculator</h1>
+        <h2>This web page provides simulation about financial plan.</h2>
     </header>
     <nav>
         <ul>
-            <li><a href="../MultimediaProject/index.html">Home</a></li>
-            <li><a href="../MultimediaProject/profile.html">About us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">About us</a></li>
         </ul>
     </nav>
-    <div class="content-result">
-        <h1>Result!!</h1>
-    <h2>This tree would be animation</h2>
-    <img src="../MultimediaProject/img/tree.png" alt="tree">
-    <a style="text-align: right; size: 20px;" href="../MultimediaProject/detail.html">More information</a>
+    <div class="contents" rel="result">
+        <div class="items-result">
+            <div class="array-result">
+                <div class="panelResult">
+                    <table id="table-result">
+                        <tr id="trResultHeader">
+                            <td id="tdResultHeader" colspan="3">House</td>
+                        </tr>
+                        <tr id="trResultPara">
+                            <td id="tdResultPara" colspan="3"><p id="pResultHouse">Investing for a House @ 2000 monthly</p></td>
+                        </tr>
+                        <tr id="trResultDetailHeader">
+                            <td>Asset Allocation</td>
+                            <td>Estimated Interest Rate</td>
+                            <td>Years</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% stocks</td>
+                            <td>7.64%</td>
+                            <td id="tdHouseYrs1" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>60% stocks / 40% bonds</td>
+                            <td>5.94%</td>
+                            <td id="tdHouseYrs3" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% bonds</td>
+                            <td>3.39%</td>
+                            <td id="tdHouseYrs4" class="resultYear">Cell 6</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panelResult">
+                    <table id="table-result">
+                        <tr id="trResultHeader">
+                            <td id="tdResultHeader" colspan="3">Education</td>
+                        </tr>
+                        <tr id="trResultPara">
+                            <td id="tdResultPara" colspan="3"><p id="pResultEdu">Investing for a Childs Education @ 2000 monthly</p></td>
+                        </tr>
+                        <tr id="trResultDetailHeader">
+                            <td>Asset Allocation</td>
+                            <td>Estimated Interest Rate</td>
+                            <td>Years</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% stocks</td>
+                            <td>7.64%</td>
+                            <td id="tdEduYrs1" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>60% stocks / 40% bonds</td>
+                            <td>5.94%</td>
+                            <td id="tdEduYrs3" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% bonds</td>
+                            <td>3.39%</td>
+                            <td id="tdEduYrs4" class="resultYear">Cell 6</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panelResult">
+                    <table id="table-result">
+                        <tr id="trResultHeader">
+                            <td id="tdResultHeader" colspan="3">Vacation</td>
+                        </tr>
+                        <tr id="trResultPara">
+                            <td id="tdResultPara" colspan="3"><p id="pResultVacation">Investing for a Dream Vacation @ 2000 monthly</p></td>
+                        </tr>
+                        <tr id="trResultDetailHeader">
+                            <td>Asset Allocation</td>
+                            <td>Estimated Interest Rate</td>
+                            <td>Years</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% stocks</td>
+                            <td>7.64%</td>
+                            <td id="tdVacYrs1" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>60% stocks / 40% bonds</td>
+                            <td>5.94%</td>
+                            <td id="tdVacYrs3" class="resultYear">Cell 6</td>
+                        </tr>
+                        <tr id="trResultDetails">
+                            <td>100% bonds</td>
+                            <td>3.39%</td>
+                            <td id="tdVacYrs4" class="resultYear">Cell 6</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="panelFunds">
+                <table id="table-funds">
+                    <tr id="trFunds">
+                        <td id="tdFundsHeader" rowspan="3">Funds</td>
+                        <td id="tdFundsType">100% stocks</td>
+                        <td id="tdFundsLink">
+                            <a href="https://www.vanguard.ca/en/investor/products/products-group/etfs/VEQT">
+                                Vanguard All-Equity ETF Portfolio (VEQT) 
+                            </a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr id="trFunds">
+                        <td id="tdFundsType">60% stocks / 40% bonds</td>
+                        <td id="tdFundsLink">
+                            <a href="https://www.vanguard.ca/en/investor/products/products-group/etfs/VBAL">
+                                Vanguard Balanced ETF Portfolio (VBAL) 
+                            </a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr id="trFunds">
+                        <td id="tdFundsType">100% bonds</td>
+                        <td id="tdFundsLink">
+                            <a href="https://www.vanguard.ca/en/advisor/products/products-group/etfs/VAB">
+                                Vanguard Canadian Aggregate Bond Index ETF (VAB) 
+                            </a>
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panelToApply">
+                <button type="button" id="btnToApplyPage"><a href="apply.html" id="anchorApply">To Apply Page</a></button>
+            </div>
+        </div>
     </div>
+    <script>
+        window.onload = function () {
+        var amtHouse = localStorage.getItem('set_txtHouseAmt');
+        var amtEdu = localStorage.getItem('set_txtEducationAmt');
+        var amtVac = localStorage.getItem('set_txtVacationAmt');
+
+        var moHouse = localStorage.getItem('set_txtHouseMonthly');
+        var moEdu = localStorage.getItem('set_txtEducationMonthly');
+        var moVac = localStorage.getItem('set_txtVacationMonthly');
+
+        var yrHouseRes1 = NPER(.0764 / 12, -moHouse, 0, amtHouse, 0);
+        var yrHouseRes3 = NPER(.0594 / 12, -moHouse, 0, amtHouse, 0);
+        var yrHouseRes4 = NPER(.0339 / 12, -moHouse, 0, amtHouse, 0);
+
+        var yrEduRes1 = NPER(.0764 / 12, -moEdu, 0, amtEdu, 0);
+        var yrEduRes3 = NPER(.0594 / 12, -moEdu, 0, amtEdu, 0);
+        var yrEduRes4 = NPER(.0339 / 12, -moEdu, 0, amtEdu, 0);
+
+        var yrVacRes1 = NPER(.0764 / 12, -moVac, 0, amtVac, 0);
+        var yrVacRes3 = NPER(.0594 / 12, -moVac, 0, amtVac, 0);
+        var yrVacRes4 = NPER(.0339 / 12, -moVac, 0, amtVac, 0);
+
+        document.getElementById("tdHouseYrs1").innerText = yrHouseRes1;
+        document.getElementById("tdHouseYrs3").innerText = yrHouseRes3;
+        document.getElementById("tdHouseYrs4").innerText = yrHouseRes4;
+
+        document.getElementById("tdEduYrs1").innerText = yrEduRes1;
+        document.getElementById("tdEduYrs3").innerText = yrEduRes3;
+        document.getElementById("tdEduYrs4").innerText = yrEduRes4;
+
+        document.getElementById("tdVacYrs1").innerText = yrVacRes1;
+        document.getElementById("tdVacYrs3").innerText = yrVacRes3;
+        document.getElementById("tdVacYrs4").innerText = yrVacRes4;
+
+        document.getElementById("pResultHouse").innerText = "Investing for a House at " + moHouse + " monthly"
+        document.getElementById("pResultEdu").innerText = "Investing for childs Education at " + moEdu + " monthly"
+        document.getElementById("pResultVacation").innerText = "Investing for your dream Vacation at " + moVac + " monthly"
+        }
+
+        const imageFiles = ['img/1.png', 'img/2.png', 'img/3.png', 'img/4.png', 'img/5.png'];
+
+        preloadImages(imageFiles, updateSlideshow);
+
+        function preloadImages(imageFiles, callback) {
+        let loadedImages = 0;
+        const totalImages = imageFiles.length;
+
+        imageFiles.forEach((src) => {
+            const img = new Image();
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    callback();
+                }
+            };
+            img.src = src;
+        });
+        }
+
+        function updateSlideshow() {
+        const slideshowContainer = document.getElementById('slideshow-container');
+        let currentImageIndex = 0;
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % imageFiles.length;
+            slideshowContainer.innerHTML = `<img src="${imageFiles[currentImageIndex]}" alt="Image ${currentImageIndex + 1}">`;
+        }, 1000);
+        }
+
+        function NPER(rate, payment, present, future, type) {
+        // The NPER function is a financial function that returns the number of periods for investment
+        // rate - The interest rate per period.
+        // payment - The payment made each period.
+        // present - The present value, or total value of all payments now.
+        // future - [optional] The future value, or a cash balance you want after the last payment is made. Defaults to 0.
+        // type - [optional] When payments are due. 0 = end of period. 1 = beginning of period. Default is 0.
+
+        // Initialize type
+        type = (typeof type === 'undefined') ? 0 : type;
+
+        // Initialize future value
+        future = (typeof future === 'undefined') ? 0 : future;
+
+        // Return number of periods
+        const num = payment * (1 + rate * type) - future * rate;
+        const den = (present * rate + payment * (1 + rate * type));
+        const nper = Math.log(num / den) / Math.log(1 + rate);
+
+        var yr = Math.trunc(nper / 12)
+        var mo = Math.trunc((nper % 12))
+
+
+        console.log(nper)
+        console.log(mo)
+        console.log(yr)
+
+        return yr + " yr/s and " + mo + "mo/s"
+        }
+    </script>
     <footer>
         <h2>&copyTakumi & Kevin</h2>
     </footer>

@@ -13,10 +13,12 @@ function calculateResults() {
 
    if (isNaN(amtHouse) || isNaN(amtEdu) || isNaN(amtVac) || isNaN(moHouse) || isNaN(moEdu) || isNaN(moVac)) {
        alert("Please input numbers only.");
+      return false;
    }
 
    if ((amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
        alert("Input cannot be empty.");
+      return false;
    }
 
    localStorage.setItem('set_txtHouseAmt', amtHouse);

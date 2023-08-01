@@ -165,6 +165,7 @@ table, tbody, tr {
 /* Common Result page */
 .items-result {
     height: 100%;
+    width: 100%;
     margin: auto;
     padding: 5px;
     display: flex;
@@ -692,10 +693,6 @@ form {
         height: max-content;
     }
 
-    .items-result {
-        width: 100%;
-    }
-
     .array-result {
         display: flex;
         flex-direction: column;
@@ -846,10 +843,6 @@ form {
     /* Result page */
     .contents[rel=result] {
         height: max-content;
-    }
-
-    .items-result {
-        width: 100%;
     }
 
     .array-result {
@@ -1005,14 +998,10 @@ form {
         height: 100%;
     }
 
-    .items-result {
-        width: 80%;
-    }
-
     .array-result {
         display: flex;
         flex-direction: row;
-        column-gap: 2%;
+        column-gap: 1%;
     }
 
     #tdResultHeader {

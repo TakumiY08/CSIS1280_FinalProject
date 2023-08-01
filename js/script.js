@@ -15,6 +15,10 @@ function calculateResults() {
        alert("Please input numbers only.");
    }
 
+   if (amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
+       alert("Input cannot be empty.");
+   }
+
    localStorage.setItem('set_txtHouseAmt', amtHouse);
    localStorage.setItem('set_txtEducationAmt', amtEdu);
    localStorage.setItem('set_txtVacationAmt', amtVac);

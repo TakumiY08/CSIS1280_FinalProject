@@ -15,7 +15,7 @@ function calculateResults() {
        alert("Please input numbers only.");
    }
 
-   if (amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
+   if ((amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
        alert("Input cannot be empty.");
    }
 

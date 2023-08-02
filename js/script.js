@@ -41,13 +41,21 @@ function checkNumber() {
 
 window.onload = function () {
 
-   document.getElementById('txtHouseAmt').value = localStorage.getItem('set_txtHouseAmt');
-   document.getElementById('txtEducationAmt').value = localStorage.getItem('set_txtEducationAmt');
-   document.getElementById('txtVacationAmt').value = localStorage.getItem('set_txtVacationAmt');
+   // document.getElementById('txtHouseAmt').value = localStorage.getItem('set_txtHouseAmt');
+   // document.getElementById('txtEducationAmt').value = localStorage.getItem('set_txtEducationAmt');
+   // document.getElementById('txtVacationAmt').value = localStorage.getItem('set_txtVacationAmt');
 
-   document.getElementById('txtHouseMonthly').value = localStorage.getItem('set_txtHouseMonthly');
-   document.getElementById('txtEducationMonthly').value = localStorage.getItem('set_txtEducationMonthly');
-   document.getElementById('txtVacationMonthly').value = localStorage.getItem('set_txtVacationMonthly');
+   // document.getElementById('txtHouseMonthly').value = localStorage.getItem('set_txtHouseMonthly');
+   // document.getElementById('txtEducationMonthly').value = localStorage.getItem('set_txtEducationMonthly');
+   // document.getElementById('txtVacationMonthly').value = localStorage.getItem('set_txtVacationMonthly');
+
+    setElementValue('txtHouseAmt', 'set_txtHouseAmt');
+    setElementValue('txtEducationAmt', 'set_txtEducationAmt');
+    setElementValue('txtVacationAmt', 'set_txtVacationAmt');
+
+    setElementValue('txtHouseMonthly', 'set_txtHouseMonthly');
+    setElementValue('txtEducationMonthly', 'set_txtEducationMonthly');
+    setElementValue('txtVacationMonthly', 'set_txtVacationMonthly');
 }
 
 
@@ -100,4 +108,13 @@ function CloseForm(argument) {
 
 function CompleteApply() {
    alert("Thank you for your apply.\nWe will contact you in a few days!");
+}
+
+function setElementValue(elementId, storageKey) {
+    var element = document.getElementById(elementId);
+    var valueFromLocalStorage = localStorage.getItem(storageKey);
+
+    if (element && valueFromLocalStorage) {
+        element.value = valueFromLocalStorage;
+    }
 }

@@ -151,6 +151,13 @@
     </div>
     <script>
         window.onload = function () {
+        
+        var flag = localStorage.getItem('setFlag');
+
+        if (flag == "e") {
+            window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html"; 
+        }
+
         var amtHouse = localStorage.getItem('set_txtHouseAmt');
         var amtEdu = localStorage.getItem('set_txtEducationAmt');
         var amtVac = localStorage.getItem('set_txtVacationAmt');

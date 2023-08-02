@@ -12,14 +12,13 @@ function calculateResults() {
    moVac = document.getElementById('txtVacationMonthly').value;
 
    if (isNaN(amtHouse) || isNaN(amtEdu) || isNaN(amtVac) || isNaN(moHouse) || isNaN(moEdu) || isNaN(moVac)) {
-       window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
       alert("Please input numbers only.");
+      window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
    }
 
    if ((amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
-      window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html"; 
       alert("Input cannot be empty.");
-       
+      window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html"; 
    }
 
    localStorage.setItem('set_txtHouseAmt', amtHouse);

@@ -13,12 +13,12 @@ function calculateResults() {
 
    if (isNaN(amtHouse) || isNaN(amtEdu) || isNaN(amtVac) || isNaN(moHouse) || isNaN(moEdu) || isNaN(moVac)) {
        alert("Please input numbers only.");
-      return;
+       window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
    }
 
    if ((amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
        alert("Input cannot be empty.");
-      return;
+       window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
    }
 
    localStorage.setItem('set_txtHouseAmt', amtHouse);

@@ -2,7 +2,8 @@ function calculateResults() {
 
    var amtHouse, amtEdu, amtVac;
    var moHouse, moEdu, moVac;
-
+   localStorage.setItem('setFlag', "y");
+   
    amtHouse = document.getElementById('txtHouse').value;
    amtEdu = document.getElementById('txtEducation').value;
    amtVac = document.getElementById('txtVacation').value;
@@ -12,8 +13,8 @@ function calculateResults() {
    moVac = document.getElementById('txtVacationMonthly').value;
 
    if (isNaN(amtHouse) || isNaN(amtEdu) || isNaN(amtVac) || isNaN(moHouse) || isNaN(moEdu) || isNaN(moVac)) {
+      localStorage.setItem('setFlag', "e");
       alert("Please input numbers only.");
-      window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
    }
 
    if (  amtHouse.trim() === "" || 
@@ -22,9 +23,8 @@ function calculateResults() {
          moHouse.trim() === "" || 
          moEdu.trim() === "" || 
          moVac.trim() === "") {
-      
+      localStorage.setItem('setFlag', "e");
       alert("Input cannot be empty.");
-      window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html"; 
    }
 
    localStorage.setItem('set_txtHouseAmt', amtHouse);

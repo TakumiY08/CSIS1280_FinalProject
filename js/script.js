@@ -16,7 +16,13 @@ function calculateResults() {
       window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html";
    }
 
-   if ((amtHouse === "") || (amtEdu === "") || (amtVac === "") || (moHouse === "") || (moEdu === "") || (moVac === "")) {
+   if (  amtHouse.trim === "" || 
+         amtEdu.trim === "" || 
+         amtVac.trim === "" || 
+         moHouse.trim === "" || 
+         moEdu.trim === "" || 
+         moVac.trim === "") {
+      
       alert("Input cannot be empty.");
       window.location.href = "https://takumiy08.github.io/CSIS1280_FinalProject/index.html"; 
    }

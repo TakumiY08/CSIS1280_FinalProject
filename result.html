@@ -188,36 +188,7 @@
         document.getElementById("pResultVacation").innerText = "Investing for your dream Vacation at " + moVac + " monthly"
         }
 
-        const imageFiles = ['img/1.png', 'img/2.png', 'img/3.png', 'img/4.png', 'img/5.png'];
-
-        preloadImages(imageFiles, updateSlideshow);
-
-        function preloadImages(imageFiles, callback) {
-        let loadedImages = 0;
-        const totalImages = imageFiles.length;
-
-        imageFiles.forEach((src) => {
-            const img = new Image();
-            img.onload = () => {
-                loadedImages++;
-                if (loadedImages === totalImages) {
-                    callback();
-                }
-            };
-            img.src = src;
-        });
-        }
-
-        function updateSlideshow() {
-        const slideshowContainer = document.getElementById('slideshow-container');
-        let currentImageIndex = 0;
-
-        setInterval(() => {
-            currentImageIndex = (currentImageIndex + 1) % imageFiles.length;
-            slideshowContainer.innerHTML = `<img src="${imageFiles[currentImageIndex]}" alt="Image ${currentImageIndex + 1}">`;
-        }, 1000);
-        }
-
+     
         function NPER(rate, payment, present, future, type) {
         // The NPER function is a financial function that returns the number of periods for investment
         // rate - The interest rate per period.
@@ -239,11 +210,6 @@
 
         var yr = Math.trunc(nper / 12)
         var mo = Math.trunc((nper % 12))
-
-
-        console.log(nper)
-        console.log(mo)
-        console.log(yr)
 
         return yr + " yr/s and " + mo + "mo/s"
         }

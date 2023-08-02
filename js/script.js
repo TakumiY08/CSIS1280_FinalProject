@@ -54,9 +54,9 @@ window.onload = function () {
    // document.getElementById('txtEducationMonthly').value = localStorage.getItem('set_txtEducationMonthly');
    // document.getElementById('txtVacationMonthly').value = localStorage.getItem('set_txtVacationMonthly');
 
-    setElementValue('txtHouseAmt', 'set_txtHouseAmt');
-    setElementValue('txtEducationAmt', 'set_txtEducationAmt');
-    setElementValue('txtVacationAmt', 'set_txtVacationAmt');
+    setElementValue('txtHouse', 'set_txtHouseAmt');
+    setElementValue('txtEducation', 'set_txtEducationAmt');
+    setElementValue('txtVacation', 'set_txtVacationAmt');
     setElementValue('txtHouseMonthly', 'set_txtHouseMonthly');
     setElementValue('txtEducationMonthly', 'set_txtEducationMonthly');
     setElementValue('txtVacationMonthly', 'set_txtVacationMonthly');

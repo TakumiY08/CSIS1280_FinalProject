@@ -52,7 +52,6 @@ window.onload = function () {
     setElementValue('txtHouseAmt', 'set_txtHouseAmt');
     setElementValue('txtEducationAmt', 'set_txtEducationAmt');
     setElementValue('txtVacationAmt', 'set_txtVacationAmt');
-
     setElementValue('txtHouseMonthly', 'set_txtHouseMonthly');
     setElementValue('txtEducationMonthly', 'set_txtEducationMonthly');
     setElementValue('txtVacationMonthly', 'set_txtVacationMonthly');
